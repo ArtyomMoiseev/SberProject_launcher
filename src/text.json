@@ -1,0 +1,27 @@
+[
+{
+"serviceId": "c4cecea2-5edd-43c0-a4df-8b7b1eecaba9",
+"serviceName": "RandomService",
+"serviceStatus": "RUNNING"
+},
+{
+"serviceId": "b2f0c9a1-040a-4690-820e-3eed57cff5ae",
+"serviceName": "RandomService",
+"serviceStatus": "RUNNING"
+},
+{
+"serviceId": "bbadc8c5-476e-4020-9b98-bf87c9aa0ea3",
+"serviceName": "RandomService",
+"serviceStatus": "RUNNING"
+},
+{
+"serviceId": "677c1d48-57c9-4d8f-b23f-1322eaf5f278",
+"serviceName": "RandomService",
+"serviceStatus": "RUNNING"
+},
+{
+"serviceId": "db62ad5a-e5a6-456e-907c-4fedae6fd0e7",
+"serviceName": "RandomService",
+"serviceStatus": "RUNNING"
+}
+]
