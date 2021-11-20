@@ -8,6 +8,7 @@ import {
 } from 'cdbreact';
 import './sidebar.css'
 import ShowUI from "./ShowUI";
+import CheckState from "./checkState";
 
 const Sidebar = () => {
     return (
@@ -29,6 +30,7 @@ const Sidebar = () => {
                     <CDBSidebarMenu>
                         <ShowUI/>
                     </CDBSidebarMenu>
+                    <CheckState></CheckState>
                 </CDBSidebarContent>
 
                 <CDBSidebarFooter style={{ textAlign: 'center' }}>
