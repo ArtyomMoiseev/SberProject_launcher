@@ -3,7 +3,11 @@ import {
     CDBSidebarMenuItem,
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
+import ShowUI from "./ShowUI";
+import UIContainer from "./UIContainer";
+
 let List = require("collections/list");
+
 class CheckState extends React.Component {
 
     constructor(props) {
@@ -19,7 +23,7 @@ class CheckState extends React.Component {
                     {
                         "serviceId": "c4cecea2-5edd-43c0-a4df-8b7b1eecaba9",
                         "serviceName": "One",
-                        "serviceStatus": ""
+                        "serviceStatus": "RUNNING"
                     },
                     {
                         "serviceId": "b2f0c9a1-040a-4690-820e-3eed57cff5ae",
@@ -29,7 +33,7 @@ class CheckState extends React.Component {
                     {
                         "serviceId": "bbadc8c5-476e-4020-9b98-bf87c9aa0ea3",
                         "serviceName": "Three",
-                        "serviceStatus": "RUNNING"
+                        "serviceStatus": ""
                     },
                     {
                         "serviceId": "677c1d48-57c9-4d8f-b23f-1322eaf5f278",
@@ -52,10 +56,9 @@ class CheckState extends React.Component {
                     servicesStatus.add(e['serviceStatus']);
                 }
                 this.setState({serviceId: servicesId,serviceName: servicesName, serviceStatus: servicesStatus});
-                //console.log(this.state.serviceId.toArray()[2]);
             }, 300);
         } catch(e) {
-            console.log(e);
+            //console.log(e);
         }
     }
 
@@ -63,14 +66,11 @@ class CheckState extends React.Component {
         const list = [];
         for (let i =0; i < this.state.serviceName.length; i++) {
             if (this.state.serviceStatus.toArray()[i] == "RUNNING") {
-                list.add(React.createElement(NavLink, {to: this.state.serviceId.toArray()[i]}, [<CDBSidebarMenuItem
+                list.add(React.createElement(NavLink, {to: "#", key: i, onClick: () => {this.props.updateState(this.state.serviceId.toArray()[i])} }, [<CDBSidebarMenuItem
                     icon="columns">{this.state.serviceName.toArray()[i]}</CDBSidebarMenuItem>]))
             }
         }
         return list;
-        //return (<NavLink exact to="/app1" activeClassName="activeClicked" n>
-        //    <CDBSidebarMenuItem icon="columns">{this.state.serviceName.toArray()[2]}</CDBSidebarMenuItem>
-        //</NavLink>);
     }
 }
 
