@@ -7,8 +7,8 @@ import {
     CDBSidebarMenu,
     CDBSidebarMenuItem,
 } from 'cdbreact';
-import { NavLink } from 'react-router-dom';
 import './sidebar.css'
+import CheckState from "./checkState";
 
 const Sidebar = () => {
     return (
@@ -27,20 +27,7 @@ const Sidebar = () => {
                 </CDBSidebarHeader>
 
                 <CDBSidebarContent className="sidebar-content">
-                    <CDBSidebarMenu>
-                        <NavLink exact to="" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns" >Dashboard</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Tables</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Profile page</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Analytics</CDBSidebarMenuItem>
-                        </NavLink>
-                    </CDBSidebarMenu>
+                    <CheckState></CheckState>
                 </CDBSidebarContent>
                 {/*<CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu >
