@@ -7,7 +7,6 @@ import {
     CDBSidebarMenu,
 } from 'cdbreact';
 import './sidebar.css'
-import ShowUI from "./ShowUI";
 import CheckState from "./checkState";
 
 const Sidebar = () => {
