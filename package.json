@@ -12,8 +12,12 @@
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
+    "react-frame-component": "^5.1.0",
+    "react-iframe": "^1.8.0",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
+    "react-widgets": "^5.5.1",
+    "single-spa-react": "^4.6.0",
     "startbootstrap-simple-sidebar": "^6.0.4",
     "web-vitals": "^1.1.2"
   },

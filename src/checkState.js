@@ -3,6 +3,8 @@ import {
     CDBSidebarMenuItem,
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
+import music from './apps/app/src/root.component'
+import UIContainer from "./UIContainer";
 let List = require("collections/list");
 class CheckState extends React.Component {
 
@@ -59,11 +61,15 @@ class CheckState extends React.Component {
         }
     }
 
+    onClick() {
+        //UIContainer.show(music);
+    }
+
     render() {
         const list = [];
         for (let i =0; i < this.state.serviceName.length; i++) {
             if (this.state.serviceStatus.toArray()[i] == "RUNNING") {
-                list.add(React.createElement(NavLink, {to: this.state.serviceId.toArray()[i]}, [<CDBSidebarMenuItem
+                list.add(React.createElement(NavLink, {to: this.state.serviceId.toArray()[i], onClick:this.onClick()}, [<CDBSidebarMenuItem
                     icon="columns">{this.state.serviceName.toArray()[i]}</CDBSidebarMenuItem>]))
             }
         }
