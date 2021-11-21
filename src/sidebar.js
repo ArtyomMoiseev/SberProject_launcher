@@ -27,7 +27,6 @@ const Sidebar = () => {
 
                 <CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu>
-                        <ShowUI/>
                     </CDBSidebarMenu>
                     <CheckState></CheckState>
                 </CDBSidebarContent>

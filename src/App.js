@@ -8,7 +8,7 @@ import React from "react";
 let Ui = new React.Component(UIContainer);
 
 function App() {
-<<<<<<< ArtyomDev
+
   return (
       <Router>
         <div className="App">
