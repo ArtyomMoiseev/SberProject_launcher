@@ -1,3 +1,4 @@
+
 import './App.css';
 import Sidebar from './sidebar';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -7,6 +8,7 @@ import React from "react";
 let Ui = new React.Component(UIContainer);
 
 function App() {
+<<<<<<< ArtyomDev
   return (
       <Router>
         <div className="App">

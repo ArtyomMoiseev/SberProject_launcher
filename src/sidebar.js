@@ -5,9 +5,9 @@ import {
     CDBSidebarFooter,
     CDBSidebarHeader,
     CDBSidebarMenu,
-    CDBSidebarMenuItem,
 } from 'cdbreact';
 import './sidebar.css'
+import ShowUI from "./ShowUI";
 import CheckState from "./checkState";
 
 const Sidebar = () => {
@@ -22,31 +22,16 @@ const Sidebar = () => {
                         className="text-decoration-none"
                         style={{ color: 'inherit' }}
                     >
-                        Sidebar
+                        Сервисы
                     </a>
                 </CDBSidebarHeader>
 
                 <CDBSidebarContent className="sidebar-content">
+                    <CDBSidebarMenu>
+                        <ShowUI/>
+                    </CDBSidebarMenu>
                     <CheckState></CheckState>
                 </CDBSidebarContent>
-                {/*<CDBSidebarContent className="sidebar-content">
-                    <CDBSidebarMenu >
-                        <NavLink exact to="/app1" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/app2" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Tables</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/app3" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Profile page</CDBSidebarMenuItem>
-                        </NavLink>
-                        <NavLink exact to="/app4" activeClassName="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">
-                                Analytics
-                            </CDBSidebarMenuItem>
-                        </NavLink>
-                    </CDBSidebarMenu>
-                </CDBSidebarContent>*/}
 
                 <CDBSidebarFooter style={{ textAlign: 'center' }}>
                     <div
@@ -54,10 +39,11 @@ const Sidebar = () => {
                             padding: '20px 5px',
                         }}
                     >
-                        Sidebar Footer
+                        Хакатон 21
                     </div>
                 </CDBSidebarFooter>
             </CDBSidebar>
+
         </div>
     );
 };
